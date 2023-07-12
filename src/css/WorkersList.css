@@ -1,0 +1,47 @@
+.wlist{
+    padding:10px;
+    
+}
+
+table{
+    border-collapse: collapse;
+    min-width: 500px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+    padding: 7px;
+    
+}
+
+table tr th{
+    background-color: #ffffff;
+    color:#000000;
+    text-align: left;
+}
+
+th{
+    
+    color: #000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+     padding:20px;
+    
+    
+}
+
+td{
+    
+    color: #000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    padding:20px;
+    font-size: 14px;
+    
+    
+}
+
+tr {
+    border:none;
+  
+}
+
+tbody tr:nth-of-type(even){
+    background-color: #dfdbd5;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+}
