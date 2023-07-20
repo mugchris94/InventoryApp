@@ -1,30 +1,53 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import '../css/ProductList.css';
 
-const products = [
-    {id:1, manufacturer:'apple', model: 'macbook air',price:3000},
-    {id:2, manufacturer:'hp', model: 'spectre' ,price:2000},
-    {id:3, manufacturer:'Dell', model: 'Inspiron' ,price:1500},
-    {id:4, manufacturer:'Dell', model: 'Dell XPS 13-9350', price:1900},
-    {id:5, manufacturer:'Asus', model: 'ZenBook', price:1750}
-  ]
 
-const productList = products.map((product) => {
-    return(
-        <tr key={product.id}>
-            <td><input type="checkbox" name="check" /></td>
-            <td>{product.id}</td>
-            <td>{product.manufacturer}</td>
-            <td>{product.model}</td>
-            <td>{product.price}</td>
-        </tr>
-    )
+
+
     
-    
-})
+
+
+
+
 
 const ProductList = (props) =>{
+
+    const [products, setProducts] = useState([]);
+
+    useEffect(() =>{
+        fetchProductData();
+       },[]);
+    
+    const fetchProductData = async() =>{
+        const Api_Url = "https://fakestoreapi.com/products"
+        const params = {
+            limit : 10
+        }
+        try {
+            const res = await axios.get(Api_Url,{params});
+            const productList = await res.data;
+            setProducts(productList);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    
+    const productList = products.map((product) => {
+        return(
+            <tr key={product.id}>
+                <td><input type="checkbox" name="check" /></td>
+                <td>{product.id}</td>
+                <td>{product.title}</td>
+                <td>{product.description}</td>
+                <td>{product.category}</td>
+                <td>{product.rating.rate}</td>
+            </tr>
+        )
+        
+        
+    })
 
     return(
         <div className="listRender">
@@ -33,9 +56,10 @@ const ProductList = (props) =>{
             <tr>
                 <th><input type="checkbox" name="check" /></th>
                 <th>Id</th>
-                <th>Product model</th>
-                <th>Product manufacturer</th>
-                <th>Product Price</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Rating</th>
             </tr>
             </thead>
             <tbody>

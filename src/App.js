@@ -17,7 +17,6 @@ function App() {
   return (
     <div className="App">
       <div className='adminBio'>
-          <h1>{user.name}</h1>
           <img
             className="avatar"
             src={user.imageUrl}

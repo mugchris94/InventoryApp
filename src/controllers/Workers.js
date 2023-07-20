@@ -35,22 +35,39 @@ const handleClick=(e)=>{
 
 const Workers = () => {
     // const [selected, setSelected] = useState()
-    const [users, setUsers] = useState()
-
+    const [users, setUsers] = useState([])
+    const api_url = "https://fakestoreapi.com/users"
     useEffect( ()=> {
-        axios.get("https://fakestoreapi.com/users")
-            .then(res => {
-                const datas = res.data;
-                if(datas.length <= 5){
-                    console.log(datas);
-                    setUsers(datas);  
-                }
-                  
-            }).catch((error)=>{
-                console.error(error)
-            })
-    })
+      fetchData();
+    },[]);
 
+    const fetchData = async(limit) =>{
+        try {
+            const res = await axios.get(api_url,{params:{ limit:limit}});
+            const datas = res.data;
+            console.log(datas);
+            setUsers(datas); 
+
+        } catch (error) {
+            console.error(error)
+        }
+    };
+
+
+
+
+    const UserData = users.map((user) => {
+                return(
+                    <tr key={user.id}>
+                        <td><input type="checkbox" name="check" onClick={handleClick}/></td>
+                        <td >{user.id}</td>
+                        <td >{user.email}</td>
+                        <td >{user.username}</td>
+                        <td >{user.phone}</td>
+                    </tr>
+                )
+            });
+    
 
     return ( 
         <div className='wlist'>
@@ -60,14 +77,14 @@ const Workers = () => {
                 <thead>
                 <tr>
                     <th><input type="checkbox" name="check" onClick={handleClick}/></th>
-                    <th>Order</th>
-                    <th>Names</th>
-                    <th>Occupation</th>
+                    <th>UserId</th>
+                    <th>Email</th>
+                    <th>Username</th>
                     <th>Contacts</th>
                 </tr>
                 </thead>
                 <tbody>
-                    {/* {users} */}
+                    {UserData}
                 </tbody>
             </table>
         </div>
