@@ -1,5 +1,6 @@
 
 import './App.css';
+import AdminLogin from './Views/AdminLogin';
 import ProductList from './controllers/ProductList';
 import Workers from './controllers/Workers';
 
@@ -28,10 +29,8 @@ function App() {
           />
       </div>
      
-      <div className='content'>
-        <ProductList />
-
-        <Workers/>
+      <div className='portal'>
+        <AdminLogin/>
       </div>
      
     </div>
