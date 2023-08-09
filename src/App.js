@@ -1,8 +1,8 @@
 
 import './App.css';
 import AdminLogin from './Views/AdminLogin';
-import ProductList from './controllers/ProductList';
-import Workers from './controllers/Workers';
+// import ProductList from './controllers/ProductList';
+// import Workers from './controllers/Workers';
 
 
 const user = {
