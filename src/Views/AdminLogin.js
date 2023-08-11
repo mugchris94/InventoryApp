@@ -1,18 +1,31 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "../css/Admin.css";
+import {loginBackground} from 
+
+
+
 const AdminLogin = () => {
+
+    // const rand = () =>{
+    //     return 
+    // }
+    
+
     const [ count, setCount] = useState(1);
     const [ desc, setDesc] = useState([]);
 
     useEffect(() => {
-        axios.get(`https://fakestoreapi.com/products/${count}`)
-                .then( (response) => {
-                    setDesc(response.data.description);
-                    console.log(count)
-                    console.log(response.data.description);
-                })
-    }, [count])
+        // get data from the fake api 
+        const fetchdata = async () => {
+            const response = await axios.get(`https://fakestoreapi.com/products/${count}`);
+            const datas = await response.data;
+            setDesc(datas.description);
+            console.log(count)
+            console.log(datas.description);
+         }
+        fetchdata();
+    }, [count]);
 
 
 
@@ -32,13 +45,14 @@ const AdminLogin = () => {
     }
 
     return ( 
-        <div className="loginPortal" onSubmit={handleSubmit}>
+        <div className="loginPortal" >
 
+            <div className="login">
             <blockquote className="quote">
-                "Hi, Welcome Back!"
+                 Welcome Back!
             </blockquote>
-            <h2 id="logo"> Sign In</h2>
-            <form>
+            <label id="logo"> Please enter Your details</label>
+            <form onSubmit={handleSubmit}>
                 <div className="input-group">
                     <label>Email</label>
                     <input type="email" value="" onChange={handleChange}/>
@@ -69,15 +83,18 @@ const AdminLogin = () => {
                 
             </form>
 
+        
+
             <button className="btn" onClick={() => setCount(count + 1) }>
                 Check Products
             </button>
             <blockquote>
                 {desc}
             </blockquote>
-
-            
-            
+            </div>
+        <div className="banner">
+            <img src={} alt="banner"/>
+        </div>
             
         </div>
      );
