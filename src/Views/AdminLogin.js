@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "../css/Admin.css";
-import {loginBackground} from 
+
 
 
 
@@ -88,12 +88,12 @@ const AdminLogin = () => {
             <button className="btn" onClick={() => setCount(count + 1) }>
                 Check Products
             </button>
-            <blockquote>
+            <blockquote className="desc">
                 {desc}
             </blockquote>
             </div>
         <div className="banner">
-            <img src={} alt="banner"/>
+            <img src="" alt="banner"/>
         </div>
             
         </div>

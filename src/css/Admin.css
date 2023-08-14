@@ -34,7 +34,7 @@
 }
 
 select{
-    width: 105%;
+    width: 110%;
     height:40px;
     padding:5px;
     
@@ -93,6 +93,10 @@ select::after{
 
 .input-group{
     margin:5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 #logo{
@@ -122,4 +126,12 @@ select::after{
     flex-direction: row;
     align-items: center;
 
+}
+
+.desc{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-items: center;
+    width: 50%;
 }
