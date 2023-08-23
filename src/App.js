@@ -5,11 +5,7 @@ import AdminLogin from './Views/AdminLogin';
 // import Workers from './controllers/Workers';
 
 
-const user = {
-  name: 'Hedy Lamarr',
-  imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
-  imageSize: 90,
-}
+
 
 
 
@@ -17,17 +13,7 @@ const user = {
 function App() {
   return (
     <div className="App">
-      <div className='adminBio'>
-          <img
-            className="avatar"
-            src={user.imageUrl}
-            alt={'Photo of '+user.name}
-            style={{
-              width: user.imageSize,
-              height: user.imageSize
-            }}
-          />
-      </div>
+      
      
       <div className='portal'>
         <AdminLogin/>
