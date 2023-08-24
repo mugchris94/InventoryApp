@@ -120,27 +120,18 @@ const AdminLogin = () => {
                 <div className="input-group">
                     <input type="submit" placeholder="Join in" name="submit"/>
                 </div>
-
-                <div className="input-group">
-                    <button type="button" className="regbtn">
-                        Create Account 
-                    </button>
-                </div>
+                <label><a href="#">Don't have an account? Sign Up </a> </label>
                 
             </form>
-
         
-
             <button className="btn" onClick={() => setCount(count + 1) }>
                 Check Products
             </button>
             <blockquote className="desc">
                 {desc}
             </blockquote>
-            </div>
-        <div className="banner">
-            <img src={logImage} alt="banner"/>
         </div>
+            
             
         </div>
      );
