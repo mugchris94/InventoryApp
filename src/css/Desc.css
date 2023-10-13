@@ -1,0 +1,10 @@
+.desc{
+    display: flex;
+    align-items:normal;
+    flex-direction: column;
+    justify-items: start;
+    margin: 25px 10px;
+
+    
+}
+
