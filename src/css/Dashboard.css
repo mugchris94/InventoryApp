@@ -1,0 +1,53 @@
+.grid-container{
+    padding:15px;
+    display: grid;
+    grid-template-columns: 300px 80%;
+    grid-auto-rows: minmax(300px);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar content"
+    }
+
+
+
+.grid-item-1{
+    grid-area:header;
+    
+}
+
+.grid-item-2{
+    grid-area:sidebar;
+    background-color: white;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+}
+
+.menu-list{
+    
+    padding:5px 0px;
+    
+}
+
+.menu-list ul{
+    padding:0px;
+    margin:0px;
+    list-style-type: none;
+}
+
+.menu-list ul li{
+    padding:10px;
+}
+
+.menu-list ul li i{
+    margin:0px 20px 0px 10px;
+}
+
+
+.nav-header{
+    padding:15px;
+    background-color: white;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+    height: 100px;
+    
+}

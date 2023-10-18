@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import React from 'react';
 import axios from 'axios';
-import '../css/WorkersList.css'
+import UsersList from '../Views/UsersList';
+import '../css/Dashboard.css'
+
 
 
 // const workers = [
@@ -33,7 +35,7 @@ const handleClick=(e)=>{
 
 
 
-const Workers = () => {
+const AdminDashboard = () => {
     // const [selected, setSelected] = useState()
     const [users, setUsers] = useState([])
     const api_url = "https://fakestoreapi.com/users"
@@ -70,25 +72,58 @@ const Workers = () => {
     
 
     return ( 
-        <div className='wlist'>
-
-        
-             <table className="workersList">
-                <thead>
-                <tr>
-                    <th><input type="checkbox" name="check" onClick={handleClick}/></th>
-                    <th>UserId</th>
-                    <th>Email</th>
-                    <th>Username</th>
-                    <th>Contacts</th>
-                </tr>
-                </thead>
-                <tbody>
-                    {UserData}
-                </tbody>
-            </table>
+      <div className='grid-container'>
+        <div className='grid-item grid-item-1'>
+          <div className='nav-header'>
+            <label type="button" className="bt">Info</label>
+            <div className='side-info'>
+                    
+            </div>
+           </div>
         </div>
+        <div className='grid-item grid-item-2'>
+            
+            <h3 className='category'>MAIN</h3>
+                    <ul>
+                        <li>Approved Contracts</li>
+                        <li>Pending Applications</li>
+                        <li>Incomplete Applications</li>
+                        <li>Denied Application</li>
+                        <li>Funded Contracts</li>
+                        <li>Archived Applications</li>
+                    </ul>
+            <h3 className='category'>Other</h3>
+                <div className='menu-list'>
+                    <ul>
+                        <li><i className="fa fa-envelope"></i>Users</li>
+                        <li><i className="fa fa-briefcase"></i> Practices</li>
+                        <li><i className="fa fa-users"></i>Admins</li>
+                    </ul>
+
+                </div>
+        </div>
+        <div className='grid-item grid-item-3'>
+
+            <div class="row">
+            <div class="col-sm-3">
+                <div class="card" style={{width: "18rem"}}>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-info">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <UsersList
+                UserData = {UserData}
+                handleClick = {handleClick}
+            />
+        </div>
+       
+      </div>
      );
 }
  
-export default Workers;
+export default AdminDashboard;

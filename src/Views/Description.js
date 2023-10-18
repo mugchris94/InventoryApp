@@ -40,7 +40,7 @@ const Description = (props) => {
             const resdata = await response.data;
             setAuthor(resdata.author);
             setQuotas(resdata.quote);
-            console.log(randQ)
+            console.log(randQ);
         } 
         
         fetchTechFeeds();
@@ -54,7 +54,7 @@ const Description = (props) => {
     return ( 
 
         <div className="desc">
-            <div className="card text-white bg-info mb-3" style={{ maxWidth: '30rem' }}>
+            <div className="card text-white bg-info mb-3" style={{ maxWidth: '40rem' }}>
               <div className="card-header">Trending Tech News</div>
                 <div className="card-body">
                     <h5 className="card-title">{techNews.title}</h5>
@@ -68,7 +68,7 @@ const Description = (props) => {
                 </div>
             </div>
 
-            <div className="card text-white bg-info mb-3"  style={{ maxWidth: '30rem' }}>
+            <div className="card text-white bg-info mb-3"  style={{ maxWidth: '40rem' }}>
               <div className="card-header">Trending News</div>
                 <div className="card-body">
                     <h5 className="card-title">{news.title}</h5>
@@ -82,7 +82,7 @@ const Description = (props) => {
                 </div>
             </div>
 
-            <div className="card text-white bg-success mb-3" style={{ maxWidth: '30rem' }}>
+            <div className="card text-white bg-success mb-3" style={{ maxWidth: '40rem' }}>
                 <div className="card-header">Famous Quotes</div>
                     <div className="card-body">
                         <h5 className="card-title">Author: {author}</h5>

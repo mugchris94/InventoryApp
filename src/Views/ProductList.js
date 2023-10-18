@@ -1,13 +1,7 @@
-
+import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import '../css/ProductList.css';
-
-
-
-
-    
-
 
 
 
@@ -16,10 +10,12 @@ const ProductList = (props) =>{
 
     const [products, setProducts] = useState([]);
 
+    
+
     useEffect(() =>{
         fetchProductData();
        },[]);
-    
+       
     const fetchProductData = async() =>{
         const Api_Url = "https://fakestoreapi.com/products"
         const params = {
@@ -33,6 +29,7 @@ const ProductList = (props) =>{
             console.log(error);
         }
     }
+    
     
     const productList = products.map((product) => {
         return(
