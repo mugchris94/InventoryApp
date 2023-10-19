@@ -82,17 +82,19 @@ const AdminDashboard = () => {
            </div>
         </div>
         <div className='grid-item grid-item-2'>
-            
-            <h3 className='category'>MAIN</h3>
+            <div className='side-menu'>
+            <h4 className='category'>  <i className="fa fa-home"></i> Dashboard</h4>
+            <div className='category-menu'>
                     <ul>
-                        <li>Approved Contracts</li>
-                        <li>Pending Applications</li>
-                        <li>Incomplete Applications</li>
-                        <li>Denied Application</li>
-                        <li>Funded Contracts</li>
-                        <li>Archived Applications</li>
+                        <li> <i className="fa fa-folder"></i>  Approved Contracts</li>
+                        <li> <i className="fa fa-folder"></i>  Pending Applications</li>
+                        <li> <i className="fa fa-folder"></i>  Incomplete Applications</li>
+                        <li> <i className="fa fa-folder"></i>  Denied Application</li>
+                        <li> <i className="fa fa-folder"></i>  Funded Contracts</li>
+                        <li> <i className="fa fa-folder"></i>  Archived Applications</li>
                     </ul>
-            <h3 className='category'>Other</h3>
+            </div>
+            <h4 className='category'> <i className="fa fa-tools"></i> Other</h4>
                 <div className='menu-list'>
                     <ul>
                         <li><i className="fa fa-envelope"></i>Users</li>
@@ -101,6 +103,7 @@ const AdminDashboard = () => {
                     </ul>
 
                 </div>
+            </div>
         </div>
         <div className='grid-item grid-item-3'>
 
