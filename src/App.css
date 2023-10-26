@@ -1,13 +1,15 @@
 .App {
   
-  position: fixed;
+  /* position: fixed;
   left:0;
   right:0;
   bottom: 0;
-  top: 0;
+  top: 0; */
   z-index:1;
   background-color: #f2f2f2;
-  
+  background-size: cover;
+  padding:0;
+  margin:0;
 
 }
 

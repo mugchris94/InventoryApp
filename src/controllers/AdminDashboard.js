@@ -63,8 +63,11 @@ const AdminDashboard = () => {
                     <tr key={user.id}>
                         <td><input type="checkbox" name="check" onClick={handleClick}/></td>
                         <td >{user.id}</td>
+                        <td >{user.name.firstname} :: {user.name.lastname} </td>
                         <td >{user.email}</td>
                         <td >{user.username}</td>
+                        <td>{user.address.geolocation.lat} : {user.address.geolocation.long}</td>
+                        <td>{user.address.city} / {user.address.street}</td>
                         <td >{user.phone}</td>
                     </tr>
                 )
@@ -75,14 +78,19 @@ const AdminDashboard = () => {
       <div className='grid-container'>
         <div className='grid-item grid-item-1'>
           <div className='nav-header'>
-            <label type="button" className="bt">Info</label>
-            <div className='side-info'>
-                    
-            </div>
+            <label type="button" className="bt">Admin Portal</label>
+            <div className='sideProfile'>
+                    <img src='https://imgur.com/pBcut2e.png' alt='' className='profile'/>
+                     <ul>
+                        <li className='active'>Mugisha Doe</li>
+                        <li>Admin</li>
+                     </ul>
+                </div>
            </div>
         </div>
         <div className='grid-item grid-item-2'>
             <div className='side-menu'>
+               
             <h4 className='category'>  <i className="fa fa-home"></i> Dashboard</h4>
             <div className='category-menu'>
                     <ul>
@@ -109,13 +117,22 @@ const AdminDashboard = () => {
 
             <div class="row">
             <div class="col-sm-3">
-                <div class="card" style={{width: "18rem"}}>
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-info">Go somewhere</a>
+            <div class="cardi" style={{width: "18rem"}}>
+                    <div class="cardbody">
+                        <h5 class="cardtitle">Total Customers</h5>
+                        <p class="cardtext">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="icon-info"><i className="fa fa-plus"></i>Totals</a>
                     </div>
                 </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="cardi" style={{width: "18rem"}}>
+                        <div class="cardbody">
+                            <h5 class="cardtitle">Total Customers</h5>
+                            <p class="cardtext">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="icon-info"><i className="fa fa-plus"></i>Totals</a>
+                        </div>
+                    </div>
             </div>
             </div>
 

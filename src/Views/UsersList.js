@@ -9,10 +9,13 @@ const UsersList = (props) => {
         <table className="workersList">
            <thead>
            <tr>
-               <th><input type="checkbox" name="check" onClick={props.handleClick}/></th>
+               <th><input type="checkbox" name="check" onClick={props.handleClick} className="checkItem"/></th>
                <th>UserId</th>
+               <th>Names</th>
                <th>Email</th>
                <th>Username</th>
+               <th>Address Geolocation</th>
+               <th>City</th>
                <th>Contacts</th>
            </tr>
            </thead>

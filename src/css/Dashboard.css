@@ -15,6 +15,7 @@
 .grid-item-1{
     grid-area:header;
     
+    
 }
 
 .grid-item-2{
@@ -49,7 +50,9 @@
     background-color: white;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
     height: 100px;
-    
+    display: flex;
+    flex-direction: row;
+    align-items: first baseline;
 }
 
 .category{
@@ -67,7 +70,7 @@
 
 .side-menu{
     padding:17px;
-
+    
 }
 
 .category-menu ul{
@@ -82,4 +85,39 @@
 
 .category-menu ul li i {
     padding:0px 15px 0px 0px;
+}
+
+
+
+.sideProfile{
+    display: flex;
+    justify-content: baseline;
+     
+  }
+  
+  .sideProfile ul{
+    list-style-type: none;
+    padding:2px;
+    margin-left: 15px;
+  }
+  
+  .sideProfile ul li{
+    padding:1px;
+  }
+  
+  .sideProfile ul li:nth-child(2){
+    font-size: 15px;
+  }
+
+
+  .active{
+    font-weight: bold;
+    color: black;
+    font-size: 19px;
+  }
+
+.profile{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
 }

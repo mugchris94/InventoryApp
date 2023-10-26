@@ -22,7 +22,7 @@ th{
     
     
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-    padding:20px;
+    padding:15px;
     
     
 }
@@ -31,7 +31,7 @@ td{
     
     
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
-    padding:20px;
+    padding:15px;
     font-size: 14px;
     
     
@@ -46,4 +46,9 @@ tbody tr:nth-of-type(even){
     background-color: #ece9e9;
     color: white;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+}
+
+
+input[type="checkbox"]{
+    width: 23px;
 }
